@@ -28,7 +28,5 @@ This can seems strange but in my opinion each language has his own character and
 
 ## What should I build?
 
-This is quite a tricky question as again the answer depends on a number of factors
+This is quite a tricky question as again the answer depends on a number of factors, the industry and anguage you want to work in and if you're building something simply to learn the language or to build up your portfolio and showoff your skills.
 
-* The industry you want to work in.
-* 
