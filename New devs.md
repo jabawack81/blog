@@ -1,6 +1,6 @@
-Lately, I've been immersing myself in content from software developer influencers and I've noticed a recurring question in almost all the streams:
+Lately, I've been immersing myself in content from software developer influencers, and I've noticed a recurring question in almost all the streams:
 
-"I'm just starting out in development. Which programming language should I learn, and what should I work on for my portfolio?"
+"I'm just starting in development. Which programming language should I learn, and what should I work on for my portfolio?"
 
 So I thought I'd share my thoughts on this. First, let's address each question separately. From this point onward, we will work with the assumption that your goal is to land your first job as a developer and start a career.
 
@@ -8,7 +8,7 @@ Which language should I learn?
 
 This is the more complex of the two questions to answer, as the language you should learn depends on a variety of factors, including:
 
-- The status of the market in your area or the area you're planning to start working
+- The status of the market in your area or in the area you're planning to start working
 - Your target job
 - Your aptitude toward each language
 
@@ -25,5 +25,4 @@ Although you can use almost any language for various purposes in today's environ
 
 ### Your attitude toward each language
 
-This can seems strange but in my opinion each language has his own character and asynchronies and so this could make it more or less suited for a specific developer, it's not something unsurmountable or impossible to cope with but it will take some experience to be able to notice it and cope wityh it and with experience it  will get less and less of a problem but at the beginning it could lead to some frustration that's why I think it could be a good idea for you to shop around a couple of languages to have a fell for them.
-Test 
+This can seems strange but in my opinion each language has his own character and idiosinchranies and this could make it more or less suited for a specific developer, it's not something unsurmountable or impossible to cope with but it could take some experience to be able to adapt your way of thinking to a specific language and it become less and less of a problem with experience but at the beginning it could lead to some frustration and that's why I think it could be a good idea for you to shop around with a couple of languages before picking THE ONE considering your plan is to spent a good chunk of your wake time with it in the near future, with the time 
