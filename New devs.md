@@ -10,7 +10,7 @@ This is the more complex of the two questions to answer, as the language you sho
 
 - The status of the market in your area or the area you're planning to start working
 - Your target job
-- Your attitude toward each language
+- Your aptitude toward each language
 
 Let me explain further:
 
@@ -23,4 +23,3 @@ This is perhaps the most important consideration to take into account. You could
 Although you can use almost any language for various purposes in today's environment, certain languages are more suited or provide more opportunities for specific job markets. For example, if your goal is to become a mobile developer, Python wouldn't be the best choice for you, even if there are mobile development projects written in Python.ivy](https://kivy.org/) that would allow you to do so this would restrict your employment options to the companies already using it, but at the same time if you're specifically targetting a company using it that's your answer and you can stop reading this and go learn it.
 
 ### Your attitude toward each language
-you aptitude for a language paradigm is an important part of selecting one rgxvdbdbd
