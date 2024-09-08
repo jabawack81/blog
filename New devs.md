@@ -1,6 +1,6 @@
 Lately, I've been immersing myself in content from software developer influencers, and I've noticed a recurring question in almost all the streams:
 
-"I'm just starting in development. Which programming language should I learn, and what should I work on for my portfolio?"
+"I'm just starting in development. Which programming language should I learn, and what should I work build?"
 
 So I thought I'd share my thoughts on this. First, let's address each question separately. From this point onward, we will work with the assumption that your goal is to land your first job as a developer and start a career.
 
@@ -29,5 +29,5 @@ This can seems strange but in my opinion each language has his own character and
 ## What should I build?
 
 This is quite a tricky question as again the answer depends on a number of factors, the industry and anguage you want to work in and if you're building something simply to learn the language or to build up your portfolio and showoff your skills; for the first of the two I would suggest you to look for and follow one of the many tutorial you can find online about building a simple applicaitons  the only suggestion I can give you is not to simply parrot what they tell you to do but try to understand the why otherwhise you could've simply copied the code from their GitHub to yours, and once done try to think how you would improve the software with new functionality or the UI/UX, for the latter the simplest answer is to look for problems around you and to solve them, doesn't really matter the size or complexity of the problem or the solution what it matter is to start building something! Small problems are almost the best place where to start as generally they have the simplest most straight forward solution and once you solved those you can start to tackle bigger and bigger problems.
-This could seem like a useless endeavour but solving even small problems could help you to train your brain into coming up in ways to split a big problem in smaller and more manageable problems.
-If you're working in a office at the moment you could look into how automate repetitive task with MS Office macros, even if you're not planning to have a career as a Visual basics developer the target should be learning the fundamentals of problem solving and software or maybe you could build a chrome or Firefox extension to add a button to fix that terrible web app you're forced to use.
+This could seem like a useless endeavour but solving even minor problems could help you to train your brain into coming up in ways to split a big problem in smaller and more manageable problems.
+If you're working in an office at the moment, you could look into how to automate repetitive tasks with MS Office macros, even if you're not planning to have a career as a Visual basics developer, the target should be learning the fundamentals of problem-solving and software, or maybe you could build a chrome or Firefox extension to add a button to fix that terrible web app you're forced to use.
