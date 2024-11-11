@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "New devs.md",
-                "mode": "source",
-                "source": false
+                "file": "_posts/2024-11-11-new-devs.md",
+                "mode": "preview",
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "New devs"
+              "title": "2024-11-11-new-devs"
             }
           }
         ]
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "New devs.md",
+                "file": "_posts/2024-11-11-new-devs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for New devs"
+              "title": "Backlinks for 2024-11-11-new-devs"
             }
           },
           {
@@ -112,12 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "New devs.md",
+                "file": "_posts/2024-11-11-new-devs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from New devs"
+              "title": "Outgoing links from 2024-11-11-new-devs"
             }
           },
           {
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "New devs.md"
+                "file": "_posts/2024-11-11-new-devs.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of New devs"
+              "title": "Outline of 2024-11-11-new-devs"
             }
           },
           {
@@ -189,19 +189,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "18b4c26613c36fb8",
+  "active": "1b20a97840eab9b9",
   "lastOpenFiles": [
+    "_site/2024/11/11/new-devs.html",
+    "_site/2024/11/11",
+    "_site/2024/11",
+    "_site/2024",
+    "_posts/2024-11-11-welcome-to-jekyll.md",
+    "_posts/2024-11-11-new-devs.md",
+    "_site/jekyll/update/2024/11/11/new-devs.html",
     "_site/jekyll/update/2024/11/11/welcome-to-jekyll.html",
+    "_site/jekyll/update/2024/11/11/welcome-to-jekyll.mad",
+    "_posts/2024-11-11-welcome-to-jekyll.mad",
     "_site/jekyll/update/2024/11/11",
     "_site/jekyll/update/2024/11",
-    "_site/jekyll/update/2024",
-    "_site/jekyll/update",
-    "_site/jekyll",
-    "_site/redirects.json",
-    "_site/posts/index.html",
-    "_site/posts",
-    "_site/norobots/index.html",
-    "_site/norobots",
     "_site/assets/img/favicons/mstile-150x150.png",
     "_site/assets/img/favicons/favicon-32x32.png",
     "_site/assets/img/favicons/favicon-16x16.png",
