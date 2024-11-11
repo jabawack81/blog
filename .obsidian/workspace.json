@@ -189,20 +189,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1b20a97840eab9b9",
+  "active": "18b4c26613c36fb8",
   "lastOpenFiles": [
     "_site/jekyll/update/2024/11/11/welcome-to-jekyll.html",
     "_site/jekyll/update/2024/11/11",
     "_site/jekyll/update/2024/11",
     "_site/jekyll/update/2024",
     "_site/jekyll/update",
-    "_site/assets/minima-social-icons.svg",
-    "_site/assets/main.css.map",
-    "_site/assets/main.css",
-    "_site/about/index.html",
     "_site/jekyll",
-    "_site/index.html",
-    "_site/feed.xml",
+    "_site/redirects.json",
+    "_site/posts/index.html",
+    "_site/posts",
+    "_site/norobots/index.html",
+    "_site/norobots",
+    "_site/assets/img/favicons/mstile-150x150.png",
+    "_site/assets/img/favicons/favicon-32x32.png",
+    "_site/assets/img/favicons/favicon-16x16.png",
+    "_site/assets/img/favicons/apple-touch-icon.png",
+    "_site/assets/img/favicons/android-chrome-512x512.png",
+    "_site/assets/img/favicons/android-chrome-192x192.png",
+    "_site/assets/minima-social-icons.svg",
     "_site/New devs.md",
     "README.md",
     "Pasted image 20240410111311.png",
@@ -218,11 +224,8 @@
     "Flipcard (smartcard + flipper zero)/purple.gif",
     "Flipcard (smartcard + flipper zero)/SOSSE - Simple Operating System for Smartcard Education.md",
     "Rickrolling wifi/README.md",
-    "Random shorts/random_color.png",
     "Utils.md",
     "wifi tie/README.md",
-    "ESP32_vga/README.md",
-    "Flipcard (smartcard + flipper zero)/jupiter2.jpg",
-    "Flipcard (smartcard + flipper zero)/funcard2.jpg"
+    "ESP32_vga/README.md"
   ]
 }
