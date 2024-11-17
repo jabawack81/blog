@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "2024-11-11-new-devs"
             }
+          },
+          {
+            "id": "13757b7f32a41343",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.6"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.6"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -189,7 +202,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1b20a97840eab9b9",
+  "active": "13757b7f32a41343",
   "lastOpenFiles": [
     "_site/2024/11/11/new-devs.html",
     "_site/2024/11/11",
