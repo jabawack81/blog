@@ -25,12 +25,14 @@
             "id": "13757b7f32a41343",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.7.6"
+                "file": "_posts/2024-11-11-new-devs.md",
+                "mode": "source",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Release Notes 1.7.6"
+              "title": "2024-11-11-new-devs"
             }
           }
         ],
@@ -202,26 +204,27 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "13757b7f32a41343",
+  "active": "18b4c26613c36fb8",
   "lastOpenFiles": [
-    "_site/2024/11/11/new-devs.html",
-    "_site/2024/11/11",
-    "_site/2024/11",
-    "_site/2024",
-    "_posts/2024-11-11-welcome-to-jekyll.md",
-    "_posts/2024-11-11-new-devs.md",
-    "_site/jekyll/update/2024/11/11/new-devs.html",
-    "_site/jekyll/update/2024/11/11/welcome-to-jekyll.html",
-    "_site/jekyll/update/2024/11/11/welcome-to-jekyll.mad",
-    "_posts/2024-11-11-welcome-to-jekyll.mad",
-    "_site/jekyll/update/2024/11/11",
-    "_site/jekyll/update/2024/11",
+    "4913",
+    "_config.yml~",
+    "index.markdown~",
+    "_posts/2024-11-11-new-devs.md~",
+    "Gemfile~",
+    "_site/sitemap.xml",
+    "_site/redirects.json",
+    "_site/posts/index.html",
+    "_site/posts",
+    "_site/assets/index.html",
+    "_site/norobots/index.html",
     "_site/assets/img/favicons/mstile-150x150.png",
     "_site/assets/img/favicons/favicon-32x32.png",
     "_site/assets/img/favicons/favicon-16x16.png",
     "_site/assets/img/favicons/apple-touch-icon.png",
     "_site/assets/img/favicons/android-chrome-512x512.png",
     "_site/assets/img/favicons/android-chrome-192x192.png",
+    "_posts/2024-11-11-welcome-to-jekyll.md",
+    "_posts/2024-11-11-new-devs.md",
     "_site/assets/minima-social-icons.svg",
     "_site/New devs.md",
     "README.md",
