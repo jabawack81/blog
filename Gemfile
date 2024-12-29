@@ -34,3 +34,5 @@ gem 'wdm', '~> 0.1', platforms: %i[mingw x64_mingw mswin]
 gem 'http_parser.rb', '0.8.0', platforms: [:jruby]
 
 gem 'jekyll-compose', '0.12.0', group: [:jekyll_plugins]
+
+gem 'html-proofer', '5.0.9'
