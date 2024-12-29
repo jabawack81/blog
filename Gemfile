@@ -35,4 +35,6 @@ gem 'http_parser.rb', '0.8.0', platforms: [:jruby]
 
 gem 'jekyll-compose', '0.12.0', group: [:jekyll_plugins]
 
-gem 'html-proofer', '5.0.9'
+group :test do
+  gem 'html-proofer', '5.0.9'
+end
