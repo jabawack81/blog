@@ -1,5 +1,5 @@
 ---
-title: New Devs
+title: How to chose your first language
 date: 2024-11-11 16:26:26 +0000
 categories: ['Development', 'New Devs']
 tags: ['Development', 'New Devs']
