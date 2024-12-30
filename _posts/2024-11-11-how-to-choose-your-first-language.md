@@ -15,9 +15,9 @@ So I thought I'd share my thoughts on this. First, let's address each question s
 
 This is the more complex of the two questions, as the language you should learn depends on various factors, including:
 
-  The job market in your area or the area where you plan to work
-  Your target job
-  Your aptitude for each language
+* The job market in your area or the area where you plan to work
+* Your target job
+* Your aptitude for each language
 
 Let me explain further:
 
