@@ -13,13 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "New devs.md",
+                "file": "_posts/2024-11-11-new-devs.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "2024-11-11-new-devs"
+            }
+          },
+          {
+            "id": "13757b7f32a41343",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/2024-11-11-new-devs.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "2024-11-11-new-devs"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -39,7 +56,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -54,7 +73,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -62,7 +83,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -85,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "New devs.md",
+                "file": "_posts/2024-11-11-new-devs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,7 +116,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 2024-11-11-new-devs"
             }
           },
           {
@@ -102,10 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "New devs.md",
+                "file": "_posts/2024-11-11-new-devs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2024-11-11-new-devs"
             }
           },
           {
@@ -116,7 +143,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -125,8 +154,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "New devs.md"
-              }
+                "file": "_posts/2024-11-11-new-devs.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 2024-11-11-new-devs"
             }
           },
           {
@@ -134,7 +165,9 @@
             "type": "leaf",
             "state": {
               "type": "calendar",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           },
           {
@@ -146,7 +179,9 @@
                 "sortOrder": "frequency",
                 "showSearch": false,
                 "searchQuery": ""
-              }
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
             }
           }
         ],
@@ -165,40 +200,49 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1b20a97840eab9b9",
+  "active": "18b4c26613c36fb8",
   "lastOpenFiles": [
+    "4913",
+    "_config.yml~",
+    "index.markdown~",
+    "_posts/2024-11-11-new-devs.md~",
+    "Gemfile~",
+    "_site/sitemap.xml",
+    "_site/redirects.json",
+    "_site/posts/index.html",
+    "_site/posts",
+    "_site/assets/index.html",
+    "_site/norobots/index.html",
+    "_site/assets/img/favicons/mstile-150x150.png",
+    "_site/assets/img/favicons/favicon-32x32.png",
+    "_site/assets/img/favicons/favicon-16x16.png",
+    "_site/assets/img/favicons/apple-touch-icon.png",
+    "_site/assets/img/favicons/android-chrome-512x512.png",
+    "_site/assets/img/favicons/android-chrome-192x192.png",
+    "_posts/2024-11-11-welcome-to-jekyll.md",
+    "_posts/2024-11-11-new-devs.md",
+    "_site/assets/minima-social-icons.svg",
+    "_site/New devs.md",
     "README.md",
     "Pasted image 20240410111311.png",
     "Nespresso vertuo pods/README.md",
     "2024-08-20.md",
     "Novelty flipper/README.md",
     "Flutter readyness for appstor.md",
-    "Novelty flipper",
     "Failed Adulting sticker/README.md.md",
     "Random shorts/README.md",
     "Spotify commenter Rails 7/README.md",
-    "Spotify commenter Rails 7",
     "Failed Adulting sticker/Pasted image 20230608112422.png",
     "Flipcard (smartcard + flipper zero)/README.md",
     "Flipcard (smartcard + flipper zero)/purple.gif",
     "Flipcard (smartcard + flipper zero)/SOSSE - Simple Operating System for Smartcard Education.md",
     "Rickrolling wifi/README.md",
-    "Random shorts/random_color.png",
-    "Nespresso vertuo pods",
-    "Random shorts/Gemfile.lock",
-    "Random shorts/Gemfile",
-    "Random shorts/random.rb",
-    "Random shorts/random.ruby",
-    "Random shorts",
     "Utils.md",
-    "Failed Adulting sticker",
     "wifi tie/README.md",
-    "ESP32_vga/README.md",
-    "ESP32_vga",
-    "Flipcard (smartcard + flipper zero)/jupiter2.jpg",
-    "Flipcard (smartcard + flipper zero)/funcard2.jpg"
+    "ESP32_vga/README.md"
   ]
 }
