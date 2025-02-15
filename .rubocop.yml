@@ -1,0 +1,11 @@
+require:
+
+AllCops:
+  NewCops: enable
+
+# Check quotes usage according to lint rule below.
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+Style/Documentation:
+  Enabled: false
