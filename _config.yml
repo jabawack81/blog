@@ -142,7 +142,7 @@ sass:
 compress_html:
   clippings: all
   comments: all
-  endings: all
+  endings: "head body"
   profile: false
   blanklines: false
   ignore:
