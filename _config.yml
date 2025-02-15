@@ -167,3 +167,11 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+plugins:
+  - jekyll-analytics
+
+jekyll_analytics:
+  Plausible:
+    domain: "internetblacksmith.dev"
+    source: "https://plausible.io/js/plausible.js"
