@@ -12,6 +12,7 @@ on:
 jobs:
   continuous-delivery:
     runs-on: ubuntu-latest
+    environment: github-pages
 
     steps:
       - name: Checkout
