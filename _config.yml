@@ -172,6 +172,6 @@ plugins:
   - jekyll-analytics
 
 jekyll_analytics:
-  Plausible:
-    domain: "blog.internetblacksmith.dev"
-    source: "https://plausible.io/js/plausible.js"
+  PostHog:
+    url: "https://eu.posthog.com"
+    apikey: POSTHOG_APIKEY_PLACEHOLDER
