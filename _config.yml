@@ -174,4 +174,4 @@ plugins:
 jekyll_analytics:
   PostHog:
     url: "https://eu.posthog.com"
-    apikey: POSTHOG_APIKEY_PLACEHOLDER
+    apikey: phc_GFYckmtwGKcwfsxopEVWhbrL1saWaWFWchCpkFwCRyK

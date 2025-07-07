@@ -25,8 +25,6 @@ jobs:
         with:
           ruby-version: 3.3
           bundler-cache: true
-      - name: Inject PostHog API Key
-        run: sed -i 's/POSTHOG_APIKEY_PLACEHOLDER/${{ secrets.POSTHOG_APIKEY }}/g' _config.yml
 
       - name: Deploy
         run: bash tools/deploy.sh
