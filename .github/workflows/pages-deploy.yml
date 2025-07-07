@@ -27,7 +27,7 @@ jobs:
       - name: Inject PostHog API Key
         env:
           POSTHOG_APIKEY: ${{ secrets.POSTHOG_APIKEY }}
-        run: sed -i "s/POSTHOG_APIKEY_PLACEHOLDER/${POSTHOG_APIKEY}/g" _config.yml
+        run: sed -i "s/POSTHOG_APIKEY_PLACEHOLDER/$POSTHOG_APIKEY/g" _config.yml
 
       - name: Deploy
         run: bash tools/deploy.sh
