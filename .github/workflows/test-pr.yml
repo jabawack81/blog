@@ -1,0 +1,79 @@
+name: Test Pull Request
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'Gemfile*'
+      - '_config.yml'
+      - '**.rb'
+      - '**.html'
+      - '**.md'
+      - '.github/workflows/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby-version: ['3.3', '3.4']
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby-version }}
+        bundler-cache: true
+    
+    - name: Security Audit
+      run: |
+        gem install bundler-audit
+        bundle-audit check --update
+    
+    - name: Build Jekyll Site
+      run: bundle exec jekyll build
+      env:
+        JEKYLL_ENV: production
+    
+    - name: HTML Proofer
+      run: bundle exec htmlproofer --disable-external --allow_hash_href _site
+    
+    - name: Ruby Linting
+      run: bundle exec rubocop
+      continue-on-error: true
+    
+    - name: Check for Breaking Changes
+      run: |
+        # Check if critical files exist
+        test -f _site/index.html || exit 1
+        test -f _site/feed.xml || exit 1
+        test -f _site/sitemap.xml || exit 1
+        
+        # Check if site has content
+        if [ $(find _site -name "*.html" | wc -l) -lt 5 ]; then
+          echo "Error: Site has too few HTML files"
+          exit 1
+        fi
+    
+    - name: Test Plugin Functionality
+      run: |
+        # Test that git-based last modified plugin works
+        if ! grep -q "last_modified_at" _site/index.html; then
+          echo "Error: Git last modified plugin not working"
+          exit 1
+        fi
+    
+    - name: Performance Check
+      run: |
+        # Check that CSS/JS files were generated
+        test -f _site/assets/css/jekyll-theme-chirpy.css || exit 1
+        test -f _site/assets/js/dist/app.min.js || exit 1
+        
+        # Check file sizes aren't too large
+        MAX_CSS_SIZE=500000  # 500KB
+        CSS_SIZE=$(stat -c%s "_site/assets/css/jekyll-theme-chirpy.css")
+        if [ $CSS_SIZE -gt $MAX_CSS_SIZE ]; then
+          echo "Warning: CSS file is larger than expected ($CSS_SIZE bytes)"
+        fi

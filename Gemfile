@@ -9,10 +9,10 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "4.3.4"
+gem "jekyll", "4.4.1"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # gem "minima", "~> 2.5"
-gem "jekyll-theme-chirpy", "7.1.1"
+gem "jekyll-theme-chirpy", "7.3.1"
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
@@ -29,7 +29,7 @@ platforms :mingw, :x64_mingw, :mswin, :jruby do
 end
 
 # Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1", platforms: %i[mingw x64_mingw mswin]
+gem "wdm", "0.2.0", platforms: %i[mingw x64_mingw mswin]
 
 # Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of the gem
 # do not have a Java counterpart.
@@ -38,13 +38,13 @@ gem "http_parser.rb", "0.8.0", platforms: [:jruby]
 gem "jekyll-compose", "0.12.0", group: [:jekyll_plugins]
 
 group :test do
-  gem "html-proofer", "5.0.9"
+  gem "html-proofer", "5.0.10"
 end
 
 group :development do
-  gem "rubocop", "~> 1.72"
+  gem "rubocop", "1.79.1"
 end
 
 gem "jekyll-analytics",
-    "~> 0.1",
+    "0.1.12",
     git: "https://github.com/hendrikschneider/jekyll-analytics"

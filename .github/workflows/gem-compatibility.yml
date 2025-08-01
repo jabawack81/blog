@@ -1,0 +1,47 @@
+name: Gem Compatibility Check
+
+on:
+  schedule:
+    - cron: '0 2 * * 0'  # Weekly on Sunday at 2 AM
+  workflow_dispatch:
+
+jobs:
+  compatibility-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.3'
+    
+    - name: Save current Gemfile.lock
+      run: cp Gemfile.lock Gemfile.lock.backup
+    
+    - name: Update all gems
+      run: bundle update
+      continue-on-error: true
+    
+    - name: Test with updated gems
+      run: |
+        bundle exec jekyll build
+        bundle exec htmlproofer --disable-external --allow_hash_href _site
+      continue-on-error: true
+    
+    - name: Report compatibility
+      run: |
+        echo "## Gem Update Compatibility Report" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if bundle exec jekyll build && bundle exec htmlproofer --disable-external --allow_hash_href _site; then
+          echo "✅ **All gems can be safely updated**" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "⚠️ **Some gem updates may cause issues**" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Changed gems:" >> $GITHUB_STEP_SUMMARY
+          echo '```diff' >> $GITHUB_STEP_SUMMARY
+          diff -u Gemfile.lock.backup Gemfile.lock | grep -E '^[+-]    ' | head -20 >> $GITHUB_STEP_SUMMARY || true
+          echo '```' >> $GITHUB_STEP_SUMMARY
+        fi

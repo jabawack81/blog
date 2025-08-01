@@ -1,0 +1,91 @@
+name: Dependabot Auto-Merge
+
+on:
+  pull_request_target:
+    types: [opened, synchronize]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  dependabot:
+    runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]'
+    
+    steps:
+    - name: Dependabot metadata
+      id: metadata
+      uses: dependabot/fetch-metadata@v2
+      with:
+        github-token: "${{ secrets.GITHUB_TOKEN }}"
+    
+    - name: Auto-approve safe updates
+      if: |
+        (steps.metadata.outputs.update-type == 'version-update:semver-patch' ||
+         steps.metadata.outputs.update-type == 'version-update:semver-minor') &&
+        steps.metadata.outputs.dependency-type != 'direct:production' ||
+        (steps.metadata.outputs.dependency-type == 'direct:production' &&
+         steps.metadata.outputs.update-type == 'version-update:semver-patch')
+      run: gh pr review --approve "$PR_URL"
+      env:
+        PR_URL: ${{ github.event.pull_request.html_url }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Label PR based on update type
+      run: |
+        if [[ "${{ steps.metadata.outputs.update-type }}" == "version-update:semver-patch" ]]; then
+          gh pr edit "$PR_URL" --add-label "automerge-patch"
+        elif [[ "${{ steps.metadata.outputs.update-type }}" == "version-update:semver-minor" ]]; then
+          gh pr edit "$PR_URL" --add-label "automerge-minor"
+        elif [[ "${{ steps.metadata.outputs.update-type }}" == "version-update:semver-major" ]]; then
+          gh pr edit "$PR_URL" --add-label "requires-review"
+        fi
+      env:
+        PR_URL: ${{ github.event.pull_request.html_url }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    # Wait for checks to complete before attempting merge
+    - name: Wait for CI checks
+      uses: fountainhead/action-wait-for-check@v1.2.0
+      id: wait-for-checks
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        checkName: "test"
+        ref: ${{ github.event.pull_request.head.sha }}
+        timeoutSeconds: 600
+    
+    - name: Auto-merge patch updates
+      if: |
+        steps.metadata.outputs.update-type == 'version-update:semver-patch' &&
+        steps.wait-for-checks.outputs.conclusion == 'success'
+      run: gh pr merge --auto --squash "$PR_URL"
+      env:
+        PR_URL: ${{ github.event.pull_request.html_url }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Auto-merge safe minor updates
+      if: |
+        steps.metadata.outputs.update-type == 'version-update:semver-minor' &&
+        steps.metadata.outputs.dependency-type != 'direct:production' &&
+        steps.wait-for-checks.outputs.conclusion == 'success'
+      run: gh pr merge --auto --squash "$PR_URL"
+      env:
+        PR_URL: ${{ github.event.pull_request.html_url }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Comment on PRs requiring review
+      if: |
+        steps.metadata.outputs.update-type == 'version-update:semver-major' ||
+        (steps.metadata.outputs.update-type == 'version-update:semver-minor' &&
+         steps.metadata.outputs.dependency-type == 'direct:production')
+      run: |
+        gh pr comment "$PR_URL" --body "This PR requires manual review:
+        - Update type: ${{ steps.metadata.outputs.update-type }}
+        - Dependency type: ${{ steps.metadata.outputs.dependency-type }}
+        - Package: ${{ steps.metadata.outputs.dependency-names }}
+        
+        Please review the changes and merge manually if appropriate."
+      env:
+        PR_URL: ${{ github.event.pull_request.html_url }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
