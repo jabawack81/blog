@@ -1,0 +1,44 @@
+/* Custom styles for performance optimization */
+
+/* Optimize images */
+img {
+  /* Use native aspect ratio */
+  height: auto;
+  /* Prevent layout shift */
+  aspect-ratio: attr(width) / attr(height);
+}
+
+/* Optimize fonts */
+@font-face {
+  font-display: swap; /* Show text immediately with fallback font */
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Footer links for legal pages */
+.footer-legal {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--main-border-color);
+  font-size: 0.875rem;
+  text-align: center;
+  
+  a {
+    margin: 0 0.5rem;
+    color: var(--text-muted-color);
+    
+    &:hover {
+      color: var(--link-color);
+    }
+  }
+}
