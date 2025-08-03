@@ -36,6 +36,7 @@ jobs:
       run: bundle exec jekyll build
       env:
         JEKYLL_ENV: production
+        POSTHOG_API_KEY: ${{ secrets.POSTHOG_API_KEY }}
     
     - name: HTML Proofer
       run: bundle exec htmlproofer --disable-external --allow_hash_href _site

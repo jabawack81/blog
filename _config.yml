@@ -174,4 +174,5 @@ plugins:
 jekyll_analytics:
   PostHog:
     url: "https://eu.posthog.com"
-    apikey: phc_GFYckmtwGKcwfsxopEVWhbrL1saWaWFWchCpkFwCRyK
+    # API key is now read from POSTHOG_API_KEY environment variable
+    # See _plugins/environment_posthog.rb

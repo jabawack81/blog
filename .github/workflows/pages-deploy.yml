@@ -27,4 +27,6 @@ jobs:
           bundler-cache: true
 
       - name: Deploy
+        env:
+          POSTHOG_API_KEY: ${{ secrets.POSTHOG_API_KEY }}
         run: bash tools/deploy.sh
