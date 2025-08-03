@@ -37,7 +37,7 @@ help() {
 
 init() {
   if [[ -z ${GITHUB_ACTION+x} && $_opt_dry_run == 'false' ]]; then
-    echo "ERROR: It is not allowed to deploy outside of the GitHub Action envrionment."
+    echo "ERROR: It is not allowed to deploy outside of the GitHub Action environment."
     echo "Type option '-h' to see the help information."
     exit -1
   fi
@@ -85,7 +85,7 @@ backup() {
   mv .git "$_backup_dir"
 
   # When adding custom domain from Github website,
-  # the CANME only exist on `gh-pages` branch
+  # the CNAME only exist on `gh-pages` branch
   if [[ -f CNAME ]]; then
     mv CNAME "$_backup_dir"
   fi
