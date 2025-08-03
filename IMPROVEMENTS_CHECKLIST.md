@@ -20,10 +20,11 @@
   - [x] Update Ruby version from 3.3 to 3.4.1
   - [x] Add dependency caching with `bundler-cache: true` (was already enabled)
   - [x] Add security audit step with `bundler-audit`
-- [ ] Fix SEO configurations in `_config.yml`
-  - [ ] Add actual Google site verification code
-  - [ ] Add Google Analytics ID (currently empty)
-  - [ ] Add missing plugins: jekyll-sitemap, jekyll-feed, jekyll-seo-tag
+- [x] Fix SEO configurations in `_config.yml`
+  - [x] Google site verification field ready (awaiting code from Search Console)
+  - [x] Removed Google Analytics (using PostHog instead)
+  - [x] Added SEO plugins: jekyll-sitemap, jekyll-seo-tag
+  - [x] Added Twitter card configuration
 - [x] Fix typos in `tools/deploy.sh`
   - Line 40: "envrionment" → "environment"
   - Line 88: "CANME" → "CNAME"
@@ -70,3 +71,4 @@ bundle exec htmlproofer --disable-external --allow_hash_href _site
 - Dependabot configured with auto-merge for safe updates
 - Comprehensive testing workflows added
 - GitHub Actions improved (Ruby 3.4.1, security audit added)
+- SEO configured (sitemap, meta tags, removed GA in favor of PostHog)

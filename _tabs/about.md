@@ -37,3 +37,10 @@ Feel free to reach out if you have questions, suggestions for topics, or just wa
 - Email: info@internetblacksmith.dev
 
 Welcome to the forge. Let's build something great together.
+
+---
+
+<div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e9ecef;">
+  <a href="/privacy/">Privacy Policy</a> | 
+  <a href="/terms/">Terms of Service</a>
+</div>
