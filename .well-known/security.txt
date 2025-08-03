@@ -1,0 +1,14 @@
+# Security Policy for internetblacksmith.dev
+
+Contact: mailto:info@internetblacksmith.dev
+Expires: 2026-01-01T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://blog.internetblacksmith.dev/.well-known/security.txt
+
+# Security Reports
+# Please report security vulnerabilities responsibly by emailing
+# info@internetblacksmith.dev with details of the vulnerability.
+
+# PGP Key
+# If you need to send encrypted communications, please request
+# a PGP key via the contact email above.
