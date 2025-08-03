@@ -47,16 +47,11 @@ social:
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 
-google_site_verification: google_meta_tag_verification # change to your verification string
+google_site_verification: # Leave empty for now - add your Google verification code here when you have one
 
 # ↑ --------------------------
 
-google_analytics:
-  id: "" # fill in your Google Analytics ID
-  # Google Analytics pageviews report settings
-  pv:
-    proxy_endpoint: # fill in the Google Analytics superProxy endpoint of Google App Engine
-    cache_path: # the local PV cache data, friendly to visitors from GFW region
+# Analytics: Using PostHog instead of Google Analytics (see jekyll_analytics section below)
 
 # Prefer color scheme setting.
 #
@@ -114,6 +109,11 @@ collections:
     output: true
     sort_by: order
 
+# Include additional directories
+include:
+  - _pages
+  - .well-known
+
 defaults:
   - scope:
       path: "" # An empty string here means all files in the project
@@ -170,6 +170,13 @@ jekyll-archives:
 
 plugins:
   - jekyll-analytics
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  
+# SEO tag settings
+twitter:
+  username: jabawack81
+  card: summary
 
 jekyll_analytics:
   PostHog:
