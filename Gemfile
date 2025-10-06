@@ -35,14 +35,14 @@ gem "wdm", "0.2.0", platforms: %i[mingw x64_mingw mswin]
 # do not have a Java counterpart.
 gem "http_parser.rb", "0.8.0", platforms: [:jruby]
 
-gem "jekyll-compose", "0.12.0", group: [:jekyll_plugins]
+
 
 group :test do
   gem "html-proofer", "5.0.10"
 end
 
 group :development do
-  gem "rubocop", "1.79.2"
+  gem "rubocop", "1.81.1"
 end
 
 gem "jekyll-analytics",

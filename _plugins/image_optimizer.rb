@@ -7,8 +7,8 @@ module Jekyll
       return content if content.nil?
 
       # Add loading="lazy" to img tags that don't already have it
-      content.gsub(/<img(?![^>]*loading\s*=)([^>]*)>/i) do |match|
-        "<img#{$1} loading=\"lazy\">"
+      content.gsub(/<img(?![^>]*loading\s*=)([^>]*)>/i) do |_match|
+        "<img#{::Regexp.last_match(1)} loading=\"lazy\">"
       end
     end
   end

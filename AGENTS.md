@@ -14,7 +14,7 @@ Jekyll-based blog using Chirpy theme (v7.3.1) focused on software development co
 - `bundle exec htmlproofer --disable-external --allow_hash_href _site` - Validate HTML
 - `bundle exec rubocop` - Lint Ruby code (plugins, config files)
 - `bash tools/deploy.sh --dry-run` - Build and test without deployment
-- `bundle exec jekyll compose "Post Title" --post` - Create new blog post with frontmatter
+- `./bin/new-post "Post Title"` - Create new blog post with frontmatter
 
 ## Architecture & Structure
 - **Posts**: _posts/ with YYYY-MM-DD-title.md format; require title, date, categories, tags in frontmatter
