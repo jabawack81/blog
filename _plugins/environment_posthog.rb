@@ -10,29 +10,26 @@ module Jekyll
 
       # Ensure the jekyll_analytics config exists
       site.config["jekyll_analytics"] ||= {}
-      site.config["jekyll_analytics"]["PostHog"] ||= {}
-
-      # Always set the URL (from config or default)
-      unless site.config["jekyll_analytics"]["PostHog"]["url"]
-        site.config["jekyll_analytics"]["PostHog"]["url"] = "https://eu.posthog.com"
-      end
 
       if jekyll_env == "production"
         # Read PostHog API key from environment variable
         posthog_api_key = ENV.fetch("POSTHOG_API_KEY", nil)
 
-        # Set the apikey with environment variable if present
+        # Only configure PostHog if API key is present
         if posthog_api_key && !posthog_api_key.empty?
-          site.config["jekyll_analytics"]["PostHog"]["apikey"] = posthog_api_key
+          site.config["jekyll_analytics"]["PostHog"] = {
+            "url" => "https://eu.posthog.com",
+            "apikey" => posthog_api_key
+          }
           Jekyll.logger.info "PostHog:", "Analytics enabled (production mode)"
         else
           Jekyll.logger.warn "PostHog:", "No API key found in environment - analytics disabled"
-          # Clear any existing key to ensure analytics don't run
-          site.config["jekyll_analytics"]["PostHog"].delete("apikey")
+          # Remove PostHog from config entirely to prevent initialization
+          site.config["jekyll_analytics"].delete("PostHog")
         end
       else
-        # Development mode - clear the API key to disable analytics
-        site.config["jekyll_analytics"]["PostHog"].delete("apikey")
+        # Development mode - remove PostHog to prevent initialization
+        site.config["jekyll_analytics"].delete("PostHog")
         Jekyll.logger.info "PostHog:", "Analytics disabled (development mode)"
       end
     end
