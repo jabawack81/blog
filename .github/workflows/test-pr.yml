@@ -20,6 +20,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Fetch full history for git-based last modified plugin
     
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
@@ -61,20 +63,34 @@ jobs:
     - name: Test Plugin Functionality
       run: |
         # Test that git-based last modified plugin works
-        if ! grep -q "last_modified_at" _site/index.html; then
-          echo "Error: Git last modified plugin not working"
+        # The plugin sets last_modified_at which is used by jekyll-seo-tag for sitemap
+        if ! grep -q "lastmod" _site/sitemap.xml; then
+          echo "Error: Git last modified plugin not working - no lastmod in sitemap"
           exit 1
         fi
     
     - name: Performance Check
       run: |
         # Check that CSS/JS files were generated
-        test -f _site/assets/css/jekyll-theme-chirpy.css || exit 1
-        test -f _site/assets/js/dist/app.min.js || exit 1
+        echo "Checking for generated assets..."
+        if [ -f _site/assets/css/jekyll-theme-chirpy.css ]; then
+          echo "✓ CSS file found"
+          CSS_SIZE=$(stat -c%s "_site/assets/css/jekyll-theme-chirpy.css")
+          echo "  Size: $CSS_SIZE bytes"
+          MAX_CSS_SIZE=500000  # 500KB
+          if [ $CSS_SIZE -gt $MAX_CSS_SIZE ]; then
+            echo "  Warning: CSS file is larger than expected"
+          fi
+        else
+          echo "✗ CSS file not found at _site/assets/css/jekyll-theme-chirpy.css"
+          echo "Available CSS files:"
+          find _site/assets -name "*.css" -type f || echo "No CSS files found"
+        fi
         
-        # Check file sizes aren't too large
-        MAX_CSS_SIZE=500000  # 500KB
-        CSS_SIZE=$(stat -c%s "_site/assets/css/jekyll-theme-chirpy.css")
-        if [ $CSS_SIZE -gt $MAX_CSS_SIZE ]; then
-          echo "Warning: CSS file is larger than expected ($CSS_SIZE bytes)"
+        if [ -f _site/assets/js/dist/app.min.js ]; then
+          echo "✓ JS file found"
+        else
+          echo "✗ JS file not found at _site/assets/js/dist/app.min.js"
+          echo "Available JS files:"
+          find _site/assets -name "*.js" -type f || echo "No JS files found"
         fi

@@ -179,7 +179,6 @@ twitter:
   card: summary
 
 jekyll_analytics:
-  PostHog:
-    url: "https://eu.posthog.com"
-    # API key is now read from POSTHOG_API_KEY environment variable
-    # See _plugins/environment_posthog.rb
+  # PostHog configuration is managed by _plugins/environment_posthog.rb
+  # It reads from POSTHOG_API_KEY environment variable and only enables
+  # analytics in production when the API key is present

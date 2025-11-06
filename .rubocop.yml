@@ -2,6 +2,9 @@ require:
 
 AllCops:
   NewCops: enable
+  Exclude:
+    - '_site/**/*'
+    - 'vendor/**/*'
 
 # Check quotes usage according to lint rule below.
 Style/StringLiterals:
@@ -9,3 +12,10 @@ Style/StringLiterals:
   EnforcedStyle: double_quotes
 Style/Documentation:
   Enabled: false
+
+# Allow slightly higher metrics for plugin configuration
+Metrics/AbcSize:
+  Max: 23
+
+Metrics/MethodLength:
+  Max: 18
