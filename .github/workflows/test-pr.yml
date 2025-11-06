@@ -63,8 +63,9 @@ jobs:
     - name: Test Plugin Functionality
       run: |
         # Test that git-based last modified plugin works
-        if ! grep -q "last_modified_at" _site/index.html; then
-          echo "Error: Git last modified plugin not working"
+        # The plugin sets last_modified_at which is used by jekyll-seo-tag for sitemap
+        if ! grep -q "lastmod" _site/sitemap.xml; then
+          echo "Error: Git last modified plugin not working - no lastmod in sitemap"
           exit 1
         fi
     
