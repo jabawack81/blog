@@ -51,8 +51,8 @@ class NewPost
 end
 
 if ARGV.empty?
-  puts "Usage: #{$0} 'Post Title'"
-  puts "Example: #{$0} 'How to Build Amazing Software'"
+  puts "Usage: #{$PROGRAM_NAME} 'Post Title'"
+  puts "Example: #{$PROGRAM_NAME} 'How to Build Amazing Software'"
   exit 1
 end
 

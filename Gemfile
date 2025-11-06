@@ -35,8 +35,6 @@ gem "wdm", "0.2.0", platforms: %i[mingw x64_mingw mswin]
 # do not have a Java counterpart.
 gem "http_parser.rb", "0.8.0", platforms: [:jruby]
 
-
-
 group :test do
   gem "html-proofer", "5.0.10"
 end
