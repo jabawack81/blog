@@ -36,11 +36,11 @@ gem "wdm", "0.2.0", platforms: %i[mingw x64_mingw mswin]
 gem "http_parser.rb", "0.8.0", platforms: [:jruby]
 
 group :test do
-  gem "html-proofer", "5.0.10"
+  gem "html-proofer", "5.1.0"
 end
 
 group :development do
-  gem "rubocop", "1.81.6"
+  gem "rubocop", "1.81.7"
 end
 
 gem "jekyll-analytics",
