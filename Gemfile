@@ -36,7 +36,7 @@ gem "wdm", "0.2.0", platforms: %i[mingw x64_mingw mswin]
 gem "http_parser.rb", "0.8.0", platforms: [:jruby]
 
 group :test do
-  gem "html-proofer", "5.1.0"
+  gem "html-proofer", "5.1.1"
 end
 
 group :development do
