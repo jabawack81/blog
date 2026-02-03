@@ -1,0 +1,60 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "date"
+require "fileutils"
+
+# Simple replacement for jekyll-compose functionality
+class NewPost
+  def initialize(title)
+    @title = title
+    @date = Time.now
+    @filename = generate_filename
+    @filepath = File.join("_posts", @filename)
+  end
+
+  def create!
+    if File.exist?(@filepath)
+      puts "Error: Post already exists at #{@filepath}"
+      exit 1
+    end
+
+    File.write(@filepath, frontmatter)
+    puts "Created new post: #{@filepath}"
+    puts "Edit with: $EDITOR #{@filepath}"
+  end
+
+  private
+
+  def generate_filename
+    slug = @title.downcase
+                 .gsub(/[^\w\s-]/, "")
+                 .gsub(/\s+/, "-")
+                 .gsub(/-+/, "-")
+                 .strip
+    "#{@date.strftime('%Y-%m-%d')}-#{slug}.md"
+  end
+
+  def frontmatter
+    <<~FRONTMATTER
+      ---
+      title: #{@title}
+      date: #{@date.strftime('%Y-%m-%d %H:%M:%S %z')}
+      categories: ['Development']
+      tags: ['Development']
+      ---
+
+      Write your post content here...
+
+    FRONTMATTER
+  end
+end
+
+if ARGV.empty?
+  puts "Usage: #{$PROGRAM_NAME} 'Post Title'"
+  puts "Example: #{$PROGRAM_NAME} 'How to Build Amazing Software'"
+  exit 1
+end
+
+title = ARGV.join(" ")
+NewPost.new(title).create!
