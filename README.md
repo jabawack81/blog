@@ -20,4 +20,4 @@ bash test.sh
 
 ## Development
 
-See [AGENTS.md](./AGENTS.md) for comprehensive development guidance including build commands, code style, and testing requirements.
+See [CLAUDE.md](./CLAUDE.md) for comprehensive development guidance including build commands, code style, and testing requirements.
