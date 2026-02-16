@@ -40,7 +40,7 @@ group :test do
 end
 
 group :development do
-  gem "rubocop", "1.84.0"
+  gem "rubocop", "1.84.2"
 end
 
 gem "jekyll-analytics",
